@@ -18,7 +18,6 @@
             <p>
                 Por tus crímenes de curiosidad, he decidido robar lo más valioso que tienes: tu atención.
                 No podrás escapar de lo que estás a punto de descubrir. Prepárate,
-                porque mi portfolio está listo para atraparte.
             </p>
             <button onclick="closeCard()">Continuar</button>
         </div>
@@ -27,13 +26,16 @@
     <!-- Capítulo 1 -->
     <section class="chapter" id="chapter1">
         <div class="content">
-            <h1>Capítulo 1: Bienvenido a mi historia</h1>
+            <h1>Capítulo 1: </h1>
             <p></p>
 
             <h2>¿Quien soy?</h2>
-            <p>Soy Martin, un desarrollador con pasion y
-                 experiencia en:
-                C#
+            <p>Soy Martin, un desarrollador con pasión para crear soluciones
+                innovadoras utilizando tecnologías como C#, .NET y SQL
+            </p>
+            <p>
+                A lo largo de mi carrera , he trabajado en proyectos que abarcan
+                desde juego en consola hasta un sistema de gestion complejo
             </p>
         </div>
     </section>
@@ -50,8 +52,22 @@
     -->
     <section class="chapter" id="chapter2">
         <div class="content">
-            <h1>Capítulo 2: Mi viaje</h1>
-            <p>Explora mi historia, habilidades y experiencia como si estuvieras en una misión...</p>
+            <h1>Capítulo 2: Mis Proyectos</h1>
+            <p>
+                Estos son unos de mis proyectos mas destacados.
+            </p>
+            <div class="projects">
+                <div class="project-card">
+                    <h2>Proyecto 1: Juego de consola CLUTCH</h2>
+                    <p>Desarrollo del videojuego utilizando C++</p>
+                    <a href="https://github.com/Lazaro995/CLUTCH" target="_blank">Ver Proyecto</a>
+                </div>
+                <div class="project-card">
+                    <h3>Proyecto 2: Sistema de Gestión de Articulos</h3>
+                    <p>Sistema de gestión desarrollado en C#, .NET y SQL</p>
+                    <a href="https://github.com/marinacchavez89/tp-winform-equipo-20B" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -64,7 +80,17 @@
     <section class="chapter" id="chapter3">
         <div class="content">
             <h1>Capítulo 3: Habilidades Tecnicas</h1>
-            <p>Pensar algo copado</p>
+            <p>Estas son algunas de las tecnologias y herramientas en las que me especializo</p>
+            <div class="skills">
+                <div class="skill-card">
+                    <h2>C#</h2>
+                    <p>Desarrollo backend con .NET para sistemas de gestion.</p>
+                </div>
+                <div class="skill-card">
+                    <h2>SQL</h2>
+                    <p>Consultas y administracion de una base de datos</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -82,7 +108,12 @@
     <section class="chapter" id="chapter4">
         <div class="content">
             <h1>Capítulo 4: Contacto</h1>
-            <p>Has llegado al final, pero siempre puedes volver a empezar o contactarme.</p>
+            <p>Has llegado al final, pero siempre puedes volver a empezar o contactarme:</p>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/lazaro995/" target="_blank">Linkedin</a>
+                <a href="https://github.com/lazaro995" target="_blank">Github</a>
+                <a href="martin.lozano995@gmail.com">Email</a>
+            </div>
             <a href="#chapter1" class="btn">Volver a empezar</a>
         </div>
     </section>
@@ -90,7 +121,7 @@
     <!-- Audio para la música de fondo -->
     <audio id="backgroundMusic" loop>
         <source src="media/musicaFondo.mp3" type="audio/mp3">
-       
+
     </audio>
 
     <script src="script.js"></script>

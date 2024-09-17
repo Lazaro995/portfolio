@@ -1,11 +1,13 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
     scroll-behavior: smooth;
     height: 100%;
     overflow-x: hidden;
-    background-color: black;  /* fondo en general */
+    background-color: black;
+    /* fondo en general */
 }
 
 .chapter {
@@ -14,27 +16,51 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1d1f21, #000000);  /* degrade del fondo en vertical */
-    color: white;  /* texto del p */
+    background: linear-gradient(270deg, #000000, #0a0f1e, #000000);
+    /* degrade del fondo en vertical */
+    color: white;
+    /* texto del p */
     text-align: center;
     padding: 20px;
-    opacity: 0;  /* Se comienza con opacity = 0 */
-    transition: opacity 1s ease-in-out;  /* Transición de los capitulos */
+    opacity: 0;
+    /* Se comienza con opacity = 0 */
+    background-size: 400% 400%;
+    background-position: 0% 50%;
+    transition: opacity 1s ease-in-out;
+    /* Transición de los capitulos */
+    animation: moveBackground 10s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 50%;
+        /* Comienza desde la derecha */
+    }
+
+    100% {
+        background-position: 200% 50%;
+        /* Se desplaza hacia la izquierda */
+    }
 }
 
 .chapter.active {
-    opacity: 1;  /* Cuando se activa, aparece con una transición suave recomendacion de bruno */
+    opacity: 1;
+    /* Cuando se activa, aparece con una transición suave recomendacion de bruno */
 }
+
 .content h1 {
     font-size: 3em;
-    color: #E63946; /* es el texto*/
-    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.7); /* cambiar por box-shadow*/
+    color: #E63946;
+    /* es el texto*/
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.7);
+    /* cambiar por box-shadow*/
 }
 
 .content p {
     font-size: 1.5em;
     color: #A8DADC;
 }
+
 #persona5-card {
     position: fixed;
     top: 50%;
@@ -42,7 +68,7 @@ html, body {
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 600px;
-    background-color: #E63946; 
+    background-color: #E63946;
     border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
     text-align: center;
@@ -62,20 +88,24 @@ html, body {
     margin-bottom: 10px;
     text-transform: uppercase;
     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
-    color: white;  /* Texto en blanco */
+    color: white;
+    /* Texto en blanco */
 }
 
 .card-content p {
     font-size: 1.2em;
     margin-bottom: 20px;
-    color: white;  /* Texto en blanco */
+    color: white;
+    /* Texto en blanco */
 }
 
 button {
     padding: 15px 30px;
     font-size: 1.2em;
-    background-color: #F1FAEE;  /* Color de fondo claro para el botón */
-    color: #E63946;  /* Texto del botón en rojo */
+    background-color: #F1FAEE;
+    /* Color de fondo claro para el botón */
+    color: #E63946;
+    /* Texto del botón en rojo */
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -87,19 +117,43 @@ button:hover {
     color: black;
 }
 
-.btn {
-    padding: 15px 30px;
-    background-color: #E63946;  /* Botón en rojo */
-    color: white;  /* Texto en blanco */
-    border: none;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-}
 
 .btn:hover {
     background-color: #A8DADC;
     color: black;
 }
 
+.contact-icons {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Espacio entre los íconos */
+}
 
+.contact-icons a {
+    font-size: 1.5em;
+    color: white;
+    background-color: #E63946;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #E63946;
+    /* Botón en rojo */
+    color: white;
+    /* Texto en blanco */
+    border: none;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+.contact-icons a:hover {
+    background-color: #A8DADC;
+    /* Cambia el color al pasar el ratón */
+}
