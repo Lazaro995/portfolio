@@ -1,13 +1,29 @@
-html,
 body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     height: 100%;
-    overflow-x: hidden;
-    background-color: black;
-    /* fondo en general */
+    overflow-x: hidden; /* para que no aparezca el scroll en x*/
+    background-color: black;/* no quitar es el que da fondo con la tarjeta*/
+}
+@font-face {
+    font-family: 'FuenteOTF';
+    src: url('fonts/earwig\ factory\ rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FuenteTTF';
+    src: url('fonts/p5hatty.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FuenteMenu';
+    src: url('fonts/Persona5MenuFontPrototype-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .chapter {
@@ -17,29 +33,23 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(270deg, #000000, #0a0f1e, #000000);
-    /* degrade del fondo en vertical */
     color: white;
-    /* texto del p */
     text-align: center;
     padding: 20px;
     opacity: 0;
-    /* Se comienza con opacity = 0 */
     background-size: 400% 400%;
     background-position: 0% 50%;
     transition: opacity 1s ease-in-out;
-    /* Transición de los capitulos */
     animation: moveBackground 10s linear infinite;
 }
 
 @keyframes moveBackground {
     0% {
         background-position: 0% 50%;
-        /* Comienza desde la derecha */
     }
 
     100% {
         background-position: 200% 50%;
-        /* Se desplaza hacia la izquierda */
     }
 }
 
@@ -49,15 +59,21 @@ body {
 }
 
 .content h1 {
-    font-size: 3em;
+    font-weight: bold;
+    font-family: 'FuenteOTF';
+    font-size: 6em;
     color: #E63946;
-    /* es el texto*/
     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.7);
-    /* cambiar por box-shadow*/
 }
 
+.content a {
+font-family: 'FuenteTTF';
+font-size: 3em;
+color: #207e81;
+}
 .content p {
-    font-size: 1.5em;
+    font-family: 'FuenteTTF';
+    font-size: 3em;
     color: #A8DADC;
 }
 
@@ -83,13 +99,13 @@ body {
     margin-bottom: 20px;
 }
 
-.card-content h1 {
+.card-content h1, h2 {
+    font-family: 'HeavyFont';
     font-size: 2.5em;
     margin-bottom: 10px;
     text-transform: uppercase;
     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
     color: white;
-    /* Texto en blanco */
 }
 
 .card-content p {
@@ -121,6 +137,34 @@ button:hover {
 .btn:hover {
     background-color: #A8DADC;
     color: black;
+}
+
+.projects, .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px;  
+}
+
+.project-card, .skill-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(50% - 10px);
+    max-width: 400px;
+    min-height: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(230, 57, 70, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.project-card:hover, .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);  /* Sombra más marcada al hover */
 }
 
 .contact-icons {
@@ -155,5 +199,67 @@ button:hover {
 }
 .contact-icons a:hover {
     background-color: #A8DADC;
+    color: black;
     /* Cambia el color al pasar el ratón */
+}
+
+.contact-icons i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+#volver-empezar {
+    padding: 15px 30px;
+    background-color: #E63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-top: 30px; /* Asegura más separación de los elementos anteriores */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#volver-empezar:hover {
+    background-color: #A8DADC;
+    color: black;
+}
+
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(230, 57, 70, 0.1) 0%, rgba(168, 218, 220, 0.1) 100%);
+    clip-path: url(#mask-clip);
+    z-index: -1;
+    opacity: 0.2;
+    animation: maskFloat 20s infinite alternate;
+}
+
+@keyframes maskFloat {
+    0% {
+        transform: translate(-5%, -5%) scale(1.1);
+    }
+    100% {
+        transform: translate(5%, 5%) scale(0.9);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: black;
+    position: relative;
+}
+
+.chapter {
+    position: relative;
+    z-index: 1;
 }
