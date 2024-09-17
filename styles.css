@@ -1,0 +1,105 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: black;  /* fondo en general */
+}
+
+.chapter {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1d1f21, #000000);  /* degrade del fondo en vertical */
+    color: white;  /* texto del p */
+    text-align: center;
+    padding: 20px;
+    opacity: 0;  /* Se comienza con opacity = 0 */
+    transition: opacity 1s ease-in-out;  /* Transición de los capitulos */
+}
+
+.chapter.active {
+    opacity: 1;  /* Cuando se activa, aparece con una transición suave recomendacion de bruno */
+}
+.content h1 {
+    font-size: 3em;
+    color: #E63946; /* es el texto*/
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.7); /* cambiar por box-shadow*/
+}
+
+.content p {
+    font-size: 1.5em;
+    color: #A8DADC;
+}
+#persona5-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: #E63946; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+    z-index: 10;
+    animation: fadeIn 1s ease;
+}
+
+.card-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+    color: white;  /* Texto en blanco */
+}
+
+.card-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: white;  /* Texto en blanco */
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #F1FAEE;  /* Color de fondo claro para el botón */
+    color: #E63946;  /* Texto del botón en rojo */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #A8DADC;
+    color: black;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #E63946;  /* Botón en rojo */
+    color: white;  /* Texto en blanco */
+    border: none;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #A8DADC;
+    color: black;
+}
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Portfolio de Martin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Tarjeta inicial estilo Persona 5 -->
+    <div id="persona5-card" class="card">
+        <img src="img/fondo.png" alt="Phantom Thieves Warning" class="card-image">
+        <div class="card-content">
+            <h1>Aviso de Ladron</h1>
+            <p>
+                Por tus crímenes de curiosidad, he decidido robar lo más valioso que tienes: tu atención.
+                No podrás escapar de lo que estás a punto de descubrir. Prepárate,
+                porque mi portfolio está listo para atraparte.
+            </p>
+            <button onclick="closeCard()">Continuar</button>
+        </div>
+    </div>
+
+    <!-- Capítulo 1 -->
+    <section class="chapter" id="chapter1">
+        <div class="content">
+            <h1>Capítulo 1: Bienvenido a mi historia</h1>
+            <p></p>
+
+            <h2>¿Quien soy?</h2>
+            <p>Soy Martin, un desarrollador con pasion y
+                 experiencia en:
+                C#
+            </p>
+        </div>
+    </section>
+    <!-- Capítulo 2 
+    En este capitulo tengo que agregar sobre los proyectos
+    usar clase project-card y dividir los divs
+    <div>class="project-card"
+        h3
+        p
+        <a insertamos repo > 
+
+        en css hacer los estilos del project, project-card los h3 y los p
+        agregar algun hover copado al link y a la tarjeta
+    -->
+    <section class="chapter" id="chapter2">
+        <div class="content">
+            <h1>Capítulo 2: Mi viaje</h1>
+            <p>Explora mi historia, habilidades y experiencia como si estuvieras en una misión...</p>
+        </div>
+    </section>
+
+    <!-- Capítulo 3 
+     clase skill y skill-card
+     SQL, .NET, gestion de base de datos
+     css: .skill, .skill-card , los h3 y p
+    
+    -->
+    <section class="chapter" id="chapter3">
+        <div class="content">
+            <h1>Capítulo 3: Habilidades Tecnicas</h1>
+            <p>Pensar algo copado</p>
+        </div>
+    </section>
+
+    <!-- Capítulo 4
+    iconos de contacto
+    linkedin
+    github
+    email 
+    hacer formulario?
+
+    .contact-icons
+    hover copado
+    .form (si es que se hace form)
+    -->
+    <section class="chapter" id="chapter4">
+        <div class="content">
+            <h1>Capítulo 4: Contacto</h1>
+            <p>Has llegado al final, pero siempre puedes volver a empezar o contactarme.</p>
+            <a href="#chapter1" class="btn">Volver a empezar</a>
+        </div>
+    </section>
+
+    <!-- Audio para la música de fondo -->
+    <audio id="backgroundMusic" loop>
+        <source src="media/musicaFondo.mp3" type="audio/mp3">
+       
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
