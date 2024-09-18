@@ -26,6 +26,14 @@ body {
     font-style: normal;
 }
 
+.pic {
+    width: 200px; 
+    height: auto;
+    border-radius: 50%; /* Hace la imagen circular, la mia en este aso era cuadrada */
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra alrededor de la imagen, y concuerda con el fondo */
+}
+
 .chapter {
     height: 100vh;
     display: flex;
