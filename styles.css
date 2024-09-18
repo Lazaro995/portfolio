@@ -25,7 +25,29 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-
+nav{
+    font-family: 'FuenteTTF';
+    position: fixed;
+    z-index: 100;
+    top: 0%;
+    width: 100%;
+    padding: 10px 0;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+}
+nav li {
+    margin: 0 20px;
+}
+nav a {
+    font-family: 'FuenteTTF';
+    font-size: 3em;
+    color: #A8DADC;
+}
 .pic {
     width: 200px; 
     height: auto;
