@@ -2,61 +2,80 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     height: 100%;
-    overflow-x: hidden; /* para que no aparezca el scroll en x*/
-    background-color: black;/* no quitar es el que da fondo con la tarjeta*/
+    overflow-x: hidden;
+    /* para que no aparezca el scroll en x*/
+    background-color: black;
+    /* no quitar es el que da fondo con la tarjeta*/
+
 }
+
+
 @font-face {
     font-family: 'FuenteOTF';
     src: url('fonts/earwig\ factory\ rg.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'FuenteTTF';
     src: url('fonts/p5hatty.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'FuenteMenu';
     src: url('fonts/Persona5MenuFontPrototype-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-nav{
+
+nav {
     font-family: 'FuenteTTF';
     position: fixed;
     z-index: 50;
     top: 0%;
     width: 100%;
     padding: 10px 0;
-    opacity: 0; /* ocultada inicialmente*/
+    opacity: 0;
     transition: opacity 1s ease;
 }
-nav ul{
+
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     margin: 0%;
     padding: 0%;
 }
+
 nav li {
     margin: 0 20px;
 }
+
 nav a {
     font-family: 'FuenteTTF';
     font-size: 3em;
     color: #A8DADC;
 }
+
 .pic {
-    width: 200px; 
+    width: 200px;
     height: auto;
-    border-radius: 50%; /* Hace la imagen circular, la mia en este aso era cuadrada */
+    border-radius: 50%;
     margin-top: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra alrededor de la imagen, y concuerda con el fondo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+#chapter-container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
 
 .chapter {
     height: 100vh;
@@ -73,6 +92,8 @@ nav a {
     background-position: 0% 50%;
     transition: opacity 1s ease-in-out;
     animation: moveBackground 10s linear infinite;
+    scroll-snap-align: start; 
+    height: 100vh;
 }
 
 @keyframes moveBackground {
@@ -89,7 +110,6 @@ nav a {
 
 .chapter.active {
     opacity: 1;
-    /* Cuando se activa, aparece con una transición suave recomendacion de bruno */
 }
 
 .content h1 {
@@ -101,10 +121,11 @@ nav a {
 }
 
 .content a {
-font-family: 'FuenteTTF';
-font-size: 3em;
-color: #207e81;
+    font-family: 'FuenteTTF';
+    font-size: 3em;
+    color: #207e81;
 }
+
 .content p {
     font-family: 'FuenteTTF';
     font-size: 3em;
@@ -133,7 +154,8 @@ color: #207e81;
     margin-bottom: 20px;
 }
 
-.card-content h1, h2 {
+.card-content h1,
+h2 {
     font-family: 'HeavyFont';
     font-size: 2.5em;
     margin-bottom: 10px;
@@ -146,16 +168,13 @@ color: #207e81;
     font-size: 1.2em;
     margin-bottom: 20px;
     color: white;
-    /* Texto en blanco */
 }
 
 button {
     padding: 15px 30px;
     font-size: 1.2em;
     background-color: #F1FAEE;
-    /* Color de fondo claro para el botón */
     color: #E63946;
-    /* Texto del botón en rojo */
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -173,14 +192,16 @@ button:hover {
     color: black;
 }
 
-.projects, .skills {
+.projects,
+.skills {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
-    gap: 20px;  
+    justify-content: center;
+    gap: 20px;
 }
 
-.project-card, .skill-card {
+.project-card,
+.skill-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -196,101 +217,99 @@ button:hover {
     border: 2px solid transparent;
 }
 
-.project-card:hover, .skill-card:hover {
+.project-card:hover,
+.skill-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);  /* Sombra más marcada al hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
 }
 
-.contact-icons {
-    margin-top: 20px;
-    margin-bottom: 40px;
+form {
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form input,
+form textarea {
+    font-family: 'FuenteTTF';
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #444;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    font-size: 1.5em;
+    width: 100%;
+}
+
+form textarea {
+    height: 150px;
+    resize: none;
+}
+
+form button {
+    font-family: 'FuenteTTF';
+    align-self: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    padding: 15px 30px;
+    background-color: #E63946;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #A8DADC;
+    color: black;
+}
+
+.contact-icons img {
+    width: 50px;
+    margin-top: 40px;
+    display: flex;
+    vertical-align: middle;
     justify-content: center;
-    gap: 20px;
-    /* Espacio entre los íconos */
+    gap: 30px;
+    flex-wrap: wrap;
+    object-fit: contain;
 }
 
 .contact-icons a {
-    font-size: 1.5em;
-    color: white;
-    background-color: #E63946;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-size: 0; 
+    background-color: transparent;
+    padding: 0;
+    margin: 10px;
 }
 
 .btn {
     padding: 15px 30px;
     background-color: #E63946;
-    /* Botón en rojo */
     color: white;
-    /* Texto en blanco */
     border: none;
     text-decoration: none;
     font-size: 1.2em;
     transition: background-color 0.3s ease;
 }
-.contact-icons a:hover {
-    background-color: #A8DADC;
-    color: black;
-    /* Cambia el color al pasar el ratón */
-}
 
-.contact-icons i {
-    margin-right: 10px;
-    font-size: 1.2em;
-}
-#volver-empezar {
-    padding: 15px 30px;
-    background-color: #E63946;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.5em;
-    display: inline-block;
-    margin-top: 30px; /* Asegura más separación de los elementos anteriores */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#volver-empezar:hover {
-    background-color: #A8DADC;
-    color: black;
-}
-
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(230, 57, 70, 0.1) 0%, rgba(168, 218, 220, 0.1) 100%);
-    clip-path: url(#mask-clip);
-    z-index: -1;
-    opacity: 0.2;
-    animation: maskFloat 20s infinite alternate;
+.contact-icons img:hover {
+    transform: scale(1.1);
 }
 
 @keyframes maskFloat {
     0% {
         transform: translate(-5%, -5%) scale(1.1);
     }
+
     100% {
         transform: translate(5%, 5%) scale(0.9);
     }
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    scroll-behavior: smooth;
-    height: 100%;
-    overflow-x: hidden;
-    background-color: black;
-    position: relative;
 }
 
 .chapter {
