@@ -17,6 +17,12 @@
             <li><a href="#chapter3">Habilidades</a></li>
             <li><a href="#chapter4">Contacto</a></li>
         </ul>
+
+        <div id="navigation-buttons">
+            <button id="prev-chapter" onclick="prevChapter()">Anterior</button>
+            <button id ="next-chapter"onclick="nextChapter()">Siguiente</button>
+        </div>
+        
     </nav>
 
 
@@ -29,11 +35,14 @@
                 Por tus crímenes de curiosidad, he decidido robar lo más valioso que tienes: tu atención.
                 No podrás escapar de lo que estás a punto de descubrir. Prepárate,
             </p>
-            <button onclick="closeCard()">Continuar</button>
+            <button id="card-button"  onclick="closeCard()">Continuar</button>
         </div>
     </div>
 
+    
+
     <div id="chapter-container">
+
 
         <!-- Capítulo 1 -->
         <section class="chapter" id="chapter1">
@@ -47,6 +56,17 @@
                 <p>
                     A lo largo de mi carrera , he trabajado en proyectos que abarcan
                     desde juego en consola hasta un sistema de gestion complejo
+                </p>
+                <p><strong>Me encanta aprender</strong></p>
+                <p>
+Además de mi experiencia en el desarrollo,
+ me apasiona aprender nuevas tecnologías que
+  optimicen la creacion de soluciones.
+   En particular, estoy muy enfocado en aprender
+    y mejorar mis habilidades con <strong>TypeScript</strong>,
+     <strong>Next.js</strong>, <strong>React</strong> y
+      <strong>NestJS</strong>, que considero fundamentales
+       para crear aplicaciones modernas y escalables.
                 </p>
             </div>
         </section>
@@ -77,6 +97,12 @@
                         <h2>Sistema de Gestión de Articulos</h2>
                         <p>Sistema de gestion de articulos desarrollado en C#, .NET y SQL</p>
                         <a href="https://github.com/marinacchavez89/tp-winform-equipo-20B" target="_blank">Ver
+                            Proyecto</a>
+                    </div>
+                    <div class="project-card">
+                        <h2>Sistema de Division de Gastos</h2>
+                        <p>Sistema de Division de Gastos desarrollado en C#, ASP .NET y SQL</p>
+                        <a href="https://github.com/marinacchavez89/tp-final-gestorgastos-20b" target="_blank">Ver
                             Proyecto</a>
                     </div>
                 </div>
@@ -151,7 +177,7 @@
 
     </audio>
 
-    <script src="script.js"></script>
+   <script src="script.js"></script>
 </body>
 
 </html>

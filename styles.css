@@ -33,6 +33,7 @@ body {
     font-style: normal;
 }
 
+
 nav {
     font-family: 'FuenteTTF';
     position: fixed;
@@ -62,6 +63,38 @@ nav a {
     color: #A8DADC;
 }
 
+
+#prev-chapter,
+#next-chapter {
+    font-family: 'FuenteTTF';
+    position: fixed;
+    top: 50%;
+    z-index: 100; /* Asegura que los botones estén por encima de otros elementos */
+    transform: translateY(-50%); /* Para centrar verticalmente */
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: #E63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#prev-chapter {
+    left: 20px; /* Margen desde el lado izquierdo */
+}
+
+#next-chapter {
+    right: 20px; /* Margen desde el lado derecho */
+}
+
+#prev-chapter:hover,
+#next-chapter:hover {
+    background-color: #A8DADC;
+    color: black;
+}
+
 .pic {
     width: 200px;
     height: auto;
@@ -71,7 +104,7 @@ nav a {
 }
 
 #chapter-container{
-    scroll-snap-type: y mandatory;
+ /*   scroll-snap-type: y mandatory;*/
     overflow-y: scroll;
     height: 100vh;
 }
@@ -79,7 +112,7 @@ nav a {
 
 .chapter {
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -94,6 +127,11 @@ nav a {
     animation: moveBackground 10s linear infinite;
     scroll-snap-align: start; 
     height: 100vh;
+}
+
+.chapter.active{
+    display: block;
+    opacity: 1;
 }
 
 @keyframes moveBackground {
@@ -313,6 +351,30 @@ form button:hover {
 }
 
 .chapter {
+    min-height: 100vh;
+    height: auto;
     position: relative;
     z-index: 1;
+}
+
+.learning-list {
+    list-style-type: disc;
+    margin: 20px 0;
+    padding-left: 40px;
+    font-size: 2em;
+    color: #A8DADC;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.learning-list li {
+    margin: 10px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.learning-list li:hover {
+    color: #E63946;
+    transform: scale(1.1);
+    font-weight: bold;
 }
